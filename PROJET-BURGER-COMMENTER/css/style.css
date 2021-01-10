@@ -1,0 +1,140 @@
+/* le body */
+
+body {
+    background: url(../images/bg.png);
+}
+
+
+/*Police css du centenu du site a google font */
+
+.site {
+    /* font-family: 'Permanent Marker', cursive;*/
+    /* font-family: 'Permanent Marker', cursive;*/
+    font-family: 'Holtwood One SC', sans-serif;
+}
+
+.text-logo {
+    /*Police du logo*/
+    font-family: 'Holtwood One SC', sans-serif;
+    /*couleur de texte*/
+    color: #e7480F;
+    /*ambre du texte gauche et en bas */
+    text-shadow: 2px 2px #ffd301;
+    /*La taille du texte dans la div logo*/
+    font-size: 50px;
+    /*ESPACE ENTRE LA DIV ET LE TEXTE: HAUT+GAUCHE */
+    padding: 40px 0px;
+    /*Centrer le texte */
+    text-align: center;
+}
+
+
+/*Colorer le glyph indépendément*/
+
+.text-logo .glyphicon {
+    color: #ffd301;
+    text-shadow: 0px 0px;
+}
+
+
+/* la navigation */
+
+.nav {
+    /* Espace de bas */
+    margin-bottom: 40px;
+}
+
+
+/*Div de l'image*/
+
+.thumbnail img {
+    /*background d'une image detourer */
+    background: #ffd301;
+}
+
+.price {
+    /*COULEUR DU FOND de la div */
+    background: #5cb85c;
+    /*AMBRE EN BAS DE LA DIV */
+    box-shadow: 0 1px rgba(0, 0, 0, 0.2);
+    /*COULEUR DU TEXTE */
+    color: #fff;
+    /* AMBRE DU TEXTE */
+    text-shadow: 2px 2px #333;
+    /*LA POSITION NE DEPEND PAS DES ELEMENTS PRECEDENT ET */
+    position: absolute;
+    right: 6px;
+    top: 20px;
+    /*ESPACE DU TEXTE HAUT GAUCHE*/
+    padding: 5px 10px;
+    /*TAILLE DE L'ECRITURE */
+    font-size: 20px;
+    /*ARRENDEMENT DE LA DIV */
+    border-radius: 3px;
+}
+
+.price::before {
+    border: 4px solid transparent;
+    border-bottom: 4px solid #4a934a;
+    border-left: 4px solid #4a934a;
+    content: "";
+    position: absolute;
+    right: 1px;
+    top: -8px;
+}
+
+.caption h4 {
+    color: #e7480F;
+    font-size: 18px;
+}
+
+
+/*QUAND L'ELEMENT DU NAVIGATEUR ACTIF */
+
+.nav-pills li.active a,
+.nav-pills li.active a:focus,
+.nav-pills li.active a:hover {
+    background: #e7480f;
+}
+
+
+/*QUAND ONT PASSE LA SOURIS SUR L'ELEMENT*/
+
+nav li a:hover {
+    /*Couleur de l'ecriture*/
+    color: #e7480f;
+    /*Couleur de l'element backfround*/
+    background-color: #eee;
+}
+
+.nav li a {
+    color: #5cb85c;
+    border: 1px solid #fff;
+    font-size: 18px;
+    text-shadow: 2px 2px #333;
+    background-color: #ffd301;
+}
+
+.btn-order {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #e7480f;
+    text-decoration: none;
+    text-shadow: 2px 2px #333;
+}
+
+.btn-order:hover {
+    color: #fff;
+    background-color: #c13c0d;
+}
+
+
+/*Pour l'admin*/
+
+.admin {
+    background: #fff;
+    padding: 50px;
+    border-radius: 10px;
+}
