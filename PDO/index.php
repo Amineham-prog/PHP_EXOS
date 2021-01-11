@@ -15,10 +15,10 @@
         $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo 'Connexion à la base de donnees';
         
-        $sql = 'SELECT randonneur.nom, randonneur.prenom,randonnees.Distance
-        FROM randonneur,randonnees
-        WHERE randonneur.Nrendoneur=randonnees.Nrendoneur
-        AND randonnees.Distance=(SELECT MAX(randonnees.Distance) FROM randonnees)';
+        $sql = 'SELECT randonneur.nom, randonneur.prenom
+        FROM randonneur';
+       
+        
         $post = $connexion->query($sql);
         $post->setFetchMode(PDO::FETCH_ASSOC);
         $resultats=$post->fetchAll();
@@ -33,15 +33,22 @@
   catch(PDOException $e){
       echo 'Echec de la connexion' .$e->getMessage();
   }
-
+  echo '<table border=2px><tr>
+  <td>Nom</td>
+  <td>Prenom</td>';
   foreach($resultats as $resultat){
-    echo '<table border=2px><tr>
-    <td>Nom</td><td>Prenom</td><td>distance</td></tr>
-    <td>' .$resultat['nom'].'</td><td>'.$resultat['prenom'].'</td><td>'.$resultat['Distance'].'</td></tr></table>';
+    
+    echo '
+    </tr>
+    <td>' .$resultat['nom'].'</td>
+    <td>'.$resultat['prenom'].'</td>
+   
+    </tr>'
+   ;
 
 
   }
- 
+ echo '</table>';
   
   
   
